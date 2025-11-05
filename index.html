@@ -1,142 +1,151 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proteção Digital</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-        body { font-family: 'Inter', sans-serif; background-color: #f7f9fb; }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proteção Digital</title>
+    <link rel="stylesheet" href="estilo/style.css">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+    </style>
 </head>
-<body class="min-h-screen flex flex-col">
+<body class="site-body">
 
-<header class="bg-white shadow-md">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-        <h1 class="text-2xl font-bold text-indigo-700">
-            <span class="mr-2">🛡️</span> Proteção Digital
-        </h1>
-        <nav class="hidden md:flex gap-4">
-            <a href="#guias" class="text-indigo-600 hover:text-indigo-800 font-medium transition duration-150">Guias</a>
-        </nav>
-        <div class="md:hidden">
-            <button id="menu-btn" class="text-indigo-600 focus:outline-none">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16"/>
-                </svg>
-            </button>
-        </div>
-    </div>
-    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
-        <a href="#guias" class="block px-4 py-2 text-indigo-600 hover:bg-indigo-50">Guias</a>
-    </div>
-</header>
+    <header class="header">
+        <div class="header__content container">
+            <h1 class="logo">
+                <span class="logo__icon">🛡️</span> Proteção Digital
+            </h1>
+            <nav class="nav">
+                <a href="#guias" class="nav__link">Guias</a>
+            </nav>
+            <div class="mobile-menu__toggle">
+                <button id="menu-btn" class="menu-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon-menu" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="mobile-menu hidden">
+            <a href="#guias" class="mobile-menu__link">Guias</a>
+        </div>
+    </header>
 
-<script>
-const btn = document.getElementById('menu-btn');
-const menu = document.getElementById('mobile-menu');
-btn.addEventListener('click', () => { menu.classList.toggle('hidden'); });
-</script>
+    <script>
+        // Mantemos o JavaScript para o menu mobile no HTML para simplicidade
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => { menu.classList.toggle('hidden'); });
+    </script>
 
-<main class="flex-grow">
-    <section class="bg-indigo-700 text-white py-16 sm:py-24 text-center">
-        <h2 class="text-4xl sm:text-5xl font-extrabold mb-4 leading-tight">Seja a Voz da Proteção.</h2>
-        <p class="text-xl sm:text-2xl font-light mb-8 max-w-3xl mx-auto opacity-90">
-            Encontre guias práticos, passo a passo e ilustrados para denunciar conteúdo impróprio envolvendo crianças e adolescentes.
-        </p>
-        <a href="#guias" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-lg text-indigo-700 bg-white hover:bg-indigo-50 shadow-lg transition duration-300 transform hover:scale-105">
-            Escolha a Rede Social Agora <span class="ml-2">👇</span>
-        </a>
-    </section>
+    <main class="main-content">
+        <section class="hero">
+            <h2 class="hero__title">Seja a Voz da Proteção.</h2>
+            <p class="hero__subtitle">
+                Encontre guias práticos, passo a passo e ilustrados para denunciar conteúdo impróprio envolvendo crianças e adolescentes.
+            </p>
+            <a href="#guias" class="hero__button">
+                Escolha a Rede Social Agora <span class="ml-2">👇</span>
+            </a>
+        </section>
 
-    <section id="guias" class="py-16 sm:py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h3 class="text-3xl font-extrabold text-gray-900 text-center mb-12">
-                Selecione a Plataforma para Iniciar o Guia
-            </h3>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-pink-600">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 flex items-center justify-center bg-pink-100 rounded-full mr-4">
-                            <img src="icones/instagramicon.png" alt="Ícone do Instagram" class="w-8 h-8 object-contain">
-                        </div>
-                        <h4 class="text-2xl font-bold text-gray-900">Instagram</h4>
-                    </div>
-                    <p class="text-gray-600 mb-4">Guia prático e ilustrado para denúncias no Instagram.</p>
-                    <a href="instagram.html" class="text-pink-600 font-semibold hover:text-pink-700 transition duration-150 flex items-center">
-                        Acessar o Guia <span class="ml-1 text-lg">›</span>
-                    </a>
-                </div>
+        <section id="guias" class="guides-section">
+            <div class="container">
+                <h3 class="guides-section__title">
+                    Selecione a Plataforma para Iniciar o Guia
+                </h3>
+                <div class="card-grid">
+                    
+                    <div class="guide-card guide-card--instagram">
+                        <div class="guide-card__header">
+                            <div class="guide-card__icon-wrapper guide-card__icon-wrapper--instagram">
+                                <img src="icones/instagramicon.png" alt="Ícone do Instagram" class="guide-card__icon">
+                            </div>
+                            <h4 class="guide-card__title">Instagram</h4>
+                        </div>
+                        <p class="guide-card__description">Guia prático e ilustrado para denúncias no Instagram.</p>
+                        <a href="instagram.html" class="guide-card__link guide-card__link--instagram">
+                            Acessar o Guia <span class="link-arrow">›</span>
+                        </a>
+                    </div>
+                    
+                    <div class="guide-card guide-card--facebook">
+                        <div class="guide-card__header">
+                            <div class="guide-card__icon-wrapper guide-card__icon-wrapper--facebook">
+                                <img src="icones/facebook.icon" alt="Ícone do Facebook" class="guide-card__icon">
+                            </div>
+                            <h4 class="guide-card__title">Facebook</h4>
+                        </div>
+                        <p class="guide-card__description">Denuncie publicações, comentários ou páginas no Facebook.</p>
+                        <a href="facebook.html" class="guide-card__link guide-card__link--facebook">
+                            Acessar o Guia <span class="link-arrow">›</span>
+                        </a>
+                    </div>
 
-                                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-blue-600">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-full mr-4">
-                            <img src="icones/facebook.icon" alt="Ícone do Facebook" class="w-8 h-8 object-contain">
-                        </div>
-                        <h4 class="text-2xl font-bold text-gray-900">Facebook</h4>
-                    </div>
-                    <p class="text-gray-600 mb-4">Denuncie publicações, comentários ou páginas no Facebook.</p>
-                    <a href="facebook.html" class="text-blue-600 font-semibold hover:text-blue-700 transition duration-150 flex items-center">
-                        Acessar o Guia <span class="ml-1 text-lg">›</span>
-                    </a>
-                </div>
+                    <div class="guide-card guide-card--twitter">
+                        <div class="guide-card__header">
+                            <div class="guide-card__icon-wrapper guide-card__icon-wrapper--twitter">
+                                <img src="icones/x-twitter.icon" alt="Ícone do X (Twitter)" class="guide-card__icon">
+                            </div>
+                            <h4 class="guide-card__title">X (Twitter)</h4>
+                        </div>
+                        <p class="guide-card__description">Saiba como reportar tweets, mídias e contas no X.</p>
+                        <a href="x-twitter.html" class="guide-card__link guide-card__link--twitter">
+                            Acessar o Guia <span class="link-arrow">›</span>
+                        </a>
+                    </div>
 
-                                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-sky-500">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 flex items-center justify-center bg-sky-100 rounded-full mr-4">
-                            <img src="icones/x-twitter.icon" alt="Ícone do X (Twitter)" class="w-8 h-8 object-contain">
-                        </div>
-                        <h4 class="text-2xl font-bold text-gray-900">X (Twitter)</h4>
-                    </div>
-                    <p class="text-gray-600 mb-4">Saiba como reportar tweets, mídias e contas no X.</p>
-                    <a href="x-twitter.html" class="text-sky-600 font-semibold hover:text-sky-700 transition duration-150 flex items-center">
-                        Acessar o Guia <span class="ml-1 text-lg">›</span>
-                    </a>
-                </div>
+                    <div class="guide-card guide-card--tiktok">
+                        <div class="guide-card__header">
+                            <div class="guide-card__icon-wrapper guide-card__icon-wrapper--tiktok">
+                                <img src="icones/tiktok.icon" alt="Ícone do TikTok" class="guide-card__icon">
+                            </div>
+                            <h4 class="guide-card__title">TikTok</h4>
+                        </div>
+                        <p class="guide-card__description">Instruções detalhadas para denúncia de vídeos, lives e comentários no TikTok.</p>
+                        <a href="tiktok.html" class="guide-card__link guide-card__link--tiktok">
+                            Acessar o Guia <span class="link-arrow">›</span>
+                        </a>
+                    </div>
 
-                                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-black">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 flex items-center justify-center bg-gray-200 rounded-full mr-4">
-                            <img src="icones/tiktok.icon" alt="Ícone do TikTok" class="w-8 h-8 object-contain">
-                        </div>
-                        <h4 class="text-2xl font-bold text-gray-900">TikTok</h4>
-                    </div>
-                    <p class="text-gray-600 mb-4">Instruções detalhadas para denúncia de vídeos, lives e comentários no TikTok.</p>
-                    <a href="tiktok.html" class="text-gray-900 font-semibold hover:text-gray-700 transition duration-150 flex items-center">
-                        Acessar o Guia <span class="ml-1 text-lg">›</span>
-                    </a>
-                </div>
+                    <div class="guide-card guide-card--youtube">
+                        <div class="guide-card__header">
+                            <div class="guide-card__icon-wrapper guide-card__icon-wrapper--youtube">
+                                <img src="icones/youtube.icon" alt="Ícone do YouTube" class="guide-card__icon">
+                            </div>
+                            <h4 class="guide-card__title">YouTube</h4>
+                        </div>
+                        <p class="guide-card__description">Procedimentos para reportar canais, vídeos e transmissões ao vivo no YouTube.</p>
+                        <a href="youtube.html" class="guide-card__link guide-card__link--youtube">
+                            Acessar o Guia <span class="link-arrow">›</span>
+                        </a>
+                    </div>
 
-                                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-red-600">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 flex items-center justify-center bg-red-100 rounded-full mr-4">
-                            <img src="icones/youtube.icon" alt="Ícone do YouTube" class="w-8 h-8 object-contain">
-                        </div>
-                        <h4 class="text-2xl font-bold text-gray-900">YouTube</h4>
-                    </div>
-                    <p class="text-gray-600 mb-4">Procedimentos para reportar canais, vídeos e transmissões ao vivo no YouTube.</p>
-                    <a href="youtube.html" class="text-red-600 font-semibold hover:text-red-700 transition duration-150 flex items-center">
-                        Acessar o Guia <span class="ml-1 text-lg">›</span>
-                    </a>
-                </div>
+                    <div class="guide-card guide-card--other">
+                        <div class="guide-card__header">
+                            <div class="guide-card__icon-wrapper guide-card__icon-wrapper--other">
+                                <img src="icones/outras.icon" alt="Ícone de Outras Plataformas" class="guide-card__icon">
+                            </div>
+                            <h4 class="guide-card__title">Outras Plataformas</h4>
+                        </div>
+                        <p class="guide-card__description">Orientações gerais aplicáveis a blogs, fóruns e outras plataformas.</p>
+                        <a href="outras.html" class="guide-card__link guide-card__link--other">
+                            Acessar o Guia <span class="link-arrow">›</span>
+                        </a>
+                    </div>
 
-                                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-indigo-500">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 flex items-center justify-center bg-indigo-100 rounded-full mr-4">
-                            <img src="icones/outras.icon" alt="Ícone de Outras Plataformas" class="w-8 h-8 object-contain">
-                        </div>|
-                        <h4 class="text-2xl font-bold text-gray-900">Outras Plataformas</h4>
-                    </div>
-                    <p class="text-gray-600 mb-4">Orientações gerais aplicáveis a blogs, fóruns e outras plataformas.</p>
-                    <a href="outras.html" class="text-indigo-600 font-semibold hover:text-indigo-700 transition duration-150 flex items-center">
-                        Acessar o Guia <span class="ml-1 text-lg">›</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-</main>
+                </div>
+            </div>
+        </section>
+    </main>
 
-<footer class="bg-gray-800 text-white py-8 mt-auto">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 Proteção Digital. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
