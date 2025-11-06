@@ -85,8 +85,8 @@
 
 .logo__icon {
     /* Define o tamanho do logo de imagem */
-    width: 4rem; 
-    height: 4rem;
+    width: 1rem; 
+    height: 1rem;
     object-fit: contain; /* Garante que a imagem se ajuste */
     margin-right: 0.5rem; /* mr-2, separa do texto */
 }
