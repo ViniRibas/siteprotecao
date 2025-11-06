@@ -74,14 +74,7 @@
     align-items: center;
 }
 
-.logo {
-    font-size: 1.5rem; /* text-2xl */
-    font-weight: 700; /* font-bold */
-    color: var(--color-indigo-700);
-    /* NOVO: Garante que o ícone e o texto fiquem alinhados */
-    display: flex;
-    align-items: center;
-}
+
 
 .logo__icon {
     /* Define o tamanho do logo de imagem */
