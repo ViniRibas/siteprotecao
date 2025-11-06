@@ -78,10 +78,20 @@
     font-size: 1.5rem; /* text-2xl */
     font-weight: 700; /* font-bold */
     color: var(--color-indigo-700);
+    /* NOVO: Garante que o ícone e o texto fiquem alinhados */
+    display: flex;
+    align-items: center;
 }
+
 .logo__icon {
-    margin-right: 0.5rem; /* mr-2 */
+    /* Define o tamanho do logo de imagem */
+    width: 4rem; 
+    height: 4rem;
+    object-fit: contain; /* Garante que a imagem se ajuste */
+    margin-right: 0.5rem; /* mr-2, separa do texto */
 }
+
+
 
 /* Navegação Desktop */
 .nav {

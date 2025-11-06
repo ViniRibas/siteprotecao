@@ -35,23 +35,26 @@
     padding: 0 1rem;
 }
 
-/* Link de Volta */
+/* Link de Volta (Aumentado) */
 .escolha-back-link {
     color: var(--color-text-medium);
     text-decoration: none;
-    font-size: 1rem;
+    /* Aumentando o tamanho da fonte */
+    font-size: 1.1rem; /* Era 1rem */
     align-self: flex-start;
     margin-bottom: 2rem;
     transition: color 0.2s;
     display: flex;
     align-items: center;
+    font-weight: 500; /* Levemente mais ousado */
 }
 .escolha-back-link:hover {
     color: var(--color-primary);
 }
 .escolha-arrow {
     margin-right: 0.5rem;
-    font-size: 1.2rem;
+    /* Aumentando o tamanho da seta */
+    font-size: 2.5rem; /* Era 1.2rem */
 }
 
 /* Caixa Principal de Escolha */
@@ -77,8 +80,9 @@
     line-height: 1.3;
 }
 .escolha-logo {
-    width: 1.5rem;
-    height: 1.5rem;
+    /* Aumentando o tamanho do ícone do X/Twitter */
+    width: 5rem; /* Era 1.5rem */
+    height: 5rem; /* Era 1.5rem */
     margin-right: 0.75rem;
 }
 @media (max-width: 600px) {
