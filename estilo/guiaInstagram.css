@@ -155,17 +155,18 @@
     }
 }
 
+/* ======= SEÇÃO DOS ESTADOS ======= */
 .estados-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.2rem;
   margin-top: 2rem;
 }
 
 .estado-card {
   background-color: var(--color-primary-light);
   border: 1px solid var(--color-primary);
-  border-radius: 8px;
+  border-radius: 10px;
   text-align: center;
   padding: 1rem;
   transition: transform 0.2s, box-shadow 0.2s;
@@ -173,7 +174,7 @@
 
 .estado-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .estado-card img {
@@ -193,8 +194,8 @@
   display: inline-block;
   background-color: var(--color-primary);
   color: var(--color-white);
-  padding: 0.4rem 0.7rem;
-  border-radius: 4px;
+  padding: 0.5rem 0.8rem;
+  border-radius: 5px;
   font-size: 0.85rem;
   text-decoration: none;
   transition: background-color 0.2s;
