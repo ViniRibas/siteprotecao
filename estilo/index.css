@@ -399,3 +399,125 @@
     margin-top: auto; /* mt-auto */
     text-align: center;
 }
+
+/* ==== EFEITOS DE HOVER E ATIVAÇÃO DOS QUADROS DE GUIA ==== */
+
+/* Efeito base para todos os cards */
+.guide-card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.guide-card:hover,
+.guide-card:focus-within {
+    transform: translateY(-6px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Efeitos de brilho personalizados para cada plataforma */
+.guide-card--instagram:hover {
+    box-shadow: 0 0 15px rgba(219, 39, 119, 0.4);
+    border-color: var(--color-pink-600);
+}
+.guide-card--facebook:hover {
+    box-shadow: 0 0 15px rgba(37, 99, 235, 0.45);
+    border-color: var(--color-blue-600);
+}
+.guide-card--twitter:hover {
+    box-shadow: 0 0 15px rgba(14, 165, 233, 0.45);
+    border-color: var(--color-sky-500);
+}
+.guide-card--tiktok:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    border-color: black;
+}
+.guide-card--youtube:hover {
+    box-shadow: 0 0 15px rgba(220, 38, 38, 0.45);
+    border-color: var(--color-red-600);
+}
+.guide-card--other:hover {
+    box-shadow: 0 0 15px rgba(79, 70, 229, 0.45);
+    border-color: var(--color-indigo-600);
+}
+
+/* Ao clicar (efeito ativo/pressionado) */
+.guide-card:active {
+    transform: scale(0.98);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15) inset;
+}
+
+/* Borda luminosa dinâmica */
+.guide-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 0.75rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+/* Cada cor de brilho individual */
+.guide-card--instagram::before {
+    box-shadow: 0 0 25px 2px rgba(219, 39, 119, 0.5);
+}
+.guide-card--facebook::before {
+    box-shadow: 0 0 25px 2px rgba(37, 99, 235, 0.5);
+}
+.guide-card--twitter::before {
+    box-shadow: 0 0 25px 2px rgba(14, 165, 233, 0.5);
+}
+.guide-card--tiktok::before {
+    box-shadow: 0 0 25px 2px rgba(0, 0, 0, 0.5);
+}
+.guide-card--youtube::before {
+    box-shadow: 0 0 25px 2px rgba(220, 38, 38, 0.5);
+}
+.guide-card--other::before {
+    box-shadow: 0 0 25px 2px rgba(79, 70, 229, 0.5);
+}
+
+/* Ativa o brilho no hover */
+.guide-card:hover::before {
+    opacity: 1;
+}
+
+
+
+/* ==== FUNDO ANIMADO EM GRADIENTE ==== */
+.hero {
+    /* Remove cor sólida e aplica gradiente dinâmico */
+    background: linear-gradient(270deg, #4338ca, #2563eb, #4f46e5, #6366f1);
+    background-size: 800% 800%;
+    animation: gradientShift 12s ease infinite;
+    color: white;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    text-align: center;
+}
+
+/* Animação de mudança de cor suave */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Em telas maiores mantém o mesmo efeito mas com maior suavidade */
+@media (min-width: 640px) {
+    .hero {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+        animation-duration: 18s;
+    }
+}
+
+
+
+/* Ao passar o mouse sobre a seção de guias, leve realce */
+.guides-section:hover {
+    background: linear-gradient(to bottom, #f9fafb 0%, #e0e7ff 100%);
+}
+
+

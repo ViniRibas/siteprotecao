@@ -148,5 +148,37 @@
         </div>
     </footer>
 
+
+<script>
+  // Faz cada card de guia ser totalmente clicável
+  document.addEventListener("DOMContentLoaded", () => {
+    // Seleciona todos os cards
+    const cards = document.querySelectorAll(".guide-card");
+
+    cards.forEach(card => {
+      // Busca o link dentro do card
+      const link = card.querySelector(".guide-card__link");
+      if (link) {
+        const url = link.getAttribute("href");
+
+        // Torna o card inteiro clicável
+        card.style.cursor = "pointer";
+
+        card.addEventListener("click", (e) => {
+          // Evita clicar duas vezes no mesmo link
+          if (!e.target.closest(".guide-card__link")) {
+            window.location.href = url;
+          }
+        });
+      }
+    });
+  });
+</script>
+
+
+
+
+
+
 </body>
 </html>
