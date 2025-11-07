@@ -43,10 +43,12 @@
 .guia-back-link {
   color: var(--color-text-medium);
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   align-self: flex-start;
   margin-bottom: 1rem;
   transition: color 0.2s;
+  font-weight: 600; /* deixa o texto em negrito */
+
 }
 .guia-back-link:hover {
   color: var(--color-primary);

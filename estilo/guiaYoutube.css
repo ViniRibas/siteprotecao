@@ -1,7 +1,7 @@
 :root {
-    --color-primary: #db2777;       /* Rosa principal */
-    --color-primary-dark: #b21c65;  /* Rosa escuro */
-    --color-primary-light: #fce7f3; /* Rosa claro */
+    --color-primary: #ff0000;       /* Vermelho principal YouTube */
+    --color-primary-dark: #b91c1c;  /* Vermelho escuro */
+    --color-primary-light: #fee2e2; /* Vermelho claro */
     --color-text-dark: #111827;
     --color-text-medium: #4b5563;
     --color-bg-light: #f9fafb;
@@ -40,15 +40,13 @@
 .guia-back-link {
     color: var(--color-text-medium);
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     align-self: flex-start;
     margin-bottom: 1rem;
     transition: color 0.2s;
     font-weight: 600; /* deixa o texto em negrito */
-
-    
-    
 }
+
 .guia-back-link:hover {
     color: var(--color-primary);
 }
@@ -64,7 +62,7 @@
     color: var(--color-text-dark);
 }
 .guia-logo {
-    width: 1.5rem;
+    width: 2.5rem;
     height: 1.5rem;
     margin-right: 0.5rem;
 }

@@ -79,11 +79,17 @@
     justify-content: center;
     line-height: 1.3;
 }
+
 .escolha-logo {
-    width: 5rem;
-    height: 5rem;
+    width: 5rem;          /* mantém o mesmo tamanho visual */
+    height: auto;         /* preserva a proporção original */
     margin-right: 0.75rem;
+    object-fit: contain;  /* evita qualquer esticamento */
+    vertical-align: middle;
 }
+
+
+
 @media (max-width: 600px) {
     .escolha-title {
         font-size: 1.5rem;
