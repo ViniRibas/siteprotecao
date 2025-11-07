@@ -154,3 +154,52 @@
         margin-bottom: 0;
     }
 }
+
+.estados-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.estado-card {
+  background-color: var(--color-primary-light);
+  border: 1px solid var(--color-primary);
+  border-radius: 8px;
+  text-align: center;
+  padding: 1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.estado-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.estado-card img {
+  width: 80px;
+  height: 60px;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.estado-nome {
+  font-weight: 600;
+  color: var(--color-text-dark);
+  margin-bottom: 0.5rem;
+}
+
+.estado-link {
+  display: inline-block;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 0.4rem 0.7rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.estado-link:hover {
+  background-color: var(--color-primary-dark);
+}
