@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proteção Digital</title>
     <link rel="stylesheet" href="estilo/index.css">
-    
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
     </style>
 </head>
+
 <body class="site-body">
 
     <header class="header">
@@ -23,8 +25,9 @@
             </nav>
             <div class="mobile-menu__toggle">
                 <button id="menu-btn" class="menu-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon-menu" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16"/>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon-menu" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
                     </svg>
                 </button>
             </div>
@@ -45,7 +48,8 @@
         <section class="hero">
             <h2 class="hero__title">Seja a Voz da Proteção.</h2>
             <p class="hero__subtitle">
-                Encontre guias práticos, passo a passo e ilustrados para denunciar conteúdo impróprio online envolvendo crianças e adolescentes e aprenda a fazer o Boletim de ocorrência Online
+                Encontre guias práticos, passo a passo e ilustrados para denunciar conteúdo impróprio online envolvendo
+                crianças e adolescentes e aprenda a fazer o Boletim de ocorrência Online
             </p>
             <a href="#guias" class="hero__button">
                 Escolha a Rede Social Agora <span class="ml-2">👇</span>
@@ -58,7 +62,7 @@
                     Selecione a Plataforma para Iniciar o Guia
                 </h3>
                 <div class="card-grid">
-                    
+
                     <div class="guide-card guide-card--instagram">
                         <div class="guide-card__header">
                             <div class="guide-card__icon-wrapper guide-card__icon-wrapper--instagram">
@@ -71,7 +75,7 @@
                             Acessar o Guia <span class="link-arrow">›</span>
                         </a>
                     </div>
-                    
+
                     <div class="guide-card guide-card--facebook">
                         <div class="guide-card__header">
                             <div class="guide-card__icon-wrapper guide-card__icon-wrapper--facebook">
@@ -105,7 +109,8 @@
                             </div>
                             <h4 class="guide-card__title">TikTok</h4>
                         </div>
-                        <p class="guide-card__description">Instruções detalhadas para denúncia de vídeos, lives e comentários no TikTok.</p>
+                        <p class="guide-card__description">Instruções detalhadas para denúncia de vídeos, lives e
+                            comentários no TikTok.</p>
                         <a href="tiktok.html" class="guide-card__link guide-card__link--tiktok">
                             Acessar o Guia <span class="link-arrow">›</span>
                         </a>
@@ -118,8 +123,9 @@
                             </div>
                             <h4 class="guide-card__title">YouTube</h4>
                         </div>
-                        <p class="guide-card__description">Procedimentos para reportar canais, vídeos e transmissões ao vivo no YouTube.</p>
-                        <a href="youtube.html" class="guide-card__link guide-card__link--youtube">
+                        <p class="guide-card__description">Procedimentos para reportar, vídeos e transmissões ao vivo no
+                            YouTube.</p>
+                        <a href="paginas/youtubeescolha.html" class="guide-card__link guide-card__link--youtube">
                             Acessar o Guia <span class="link-arrow">›</span>
                         </a>
                     </div>
@@ -127,7 +133,8 @@
                     <div class="guide-card guide-card--other">
                         <div class="guide-card__header">
                             <div class="guide-card__icon-wrapper guide-card__icon-wrapper--other">
-                                <img src="icones/blueskyicon.png" alt="Ícone de Outras Plataformas" class="guide-card__icon">
+                                <img src="icones/blueskyicon.png" alt="Ícone de Outras Plataformas"
+                                    class="guide-card__icon">
                             </div>
                             <h4 class="guide-card__title">BlueSky</h4>
                         </div>
@@ -149,31 +156,31 @@
     </footer>
 
 
-<script>
-  // Faz cada card de guia ser totalmente clicável
-  document.addEventListener("DOMContentLoaded", () => {
-    // Seleciona todos os cards
-    const cards = document.querySelectorAll(".guide-card");
+    <script>
+        // Faz cada card de guia ser totalmente clicável
+        document.addEventListener("DOMContentLoaded", () => {
+            // Seleciona todos os cards
+            const cards = document.querySelectorAll(".guide-card");
 
-    cards.forEach(card => {
-      // Busca o link dentro do card
-      const link = card.querySelector(".guide-card__link");
-      if (link) {
-        const url = link.getAttribute("href");
+            cards.forEach(card => {
+                // Busca o link dentro do card
+                const link = card.querySelector(".guide-card__link");
+                if (link) {
+                    const url = link.getAttribute("href");
 
-        // Torna o card inteiro clicável
-        card.style.cursor = "pointer";
+                    // Torna o card inteiro clicável
+                    card.style.cursor = "pointer";
 
-        card.addEventListener("click", (e) => {
-          // Evita clicar duas vezes no mesmo link
-          if (!e.target.closest(".guide-card__link")) {
-            window.location.href = url;
-          }
+                    card.addEventListener("click", (e) => {
+                        // Evita clicar duas vezes no mesmo link
+                        if (!e.target.closest(".guide-card__link")) {
+                            window.location.href = url;
+                        }
+                    });
+                }
+            });
         });
-      }
-    });
-  });
-</script>
+    </script>
 
 
 
@@ -181,4 +188,5 @@
 
 
 </body>
+
 </html>
