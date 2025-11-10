@@ -206,3 +206,57 @@
 .estado-link:hover {
   background-color: var(--color-primary-dark);
 }
+
+
+/* ===== Correção global para links longos (como o da Polícia Federal) ===== */
+
+/* Garante que todo o conteúdo dentro dos cards se ajuste sem estourar */
+.guia-step,
+.guia-intro,
+.guia-summary,
+.step-text,
+.estado-card,
+.container {
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  min-width: 0;
+}
+
+/* Impede que links grandes causem rolagem lateral */
+a {
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  max-width: 100%;
+  white-space: normal;
+}
+
+/* Para links muito longos dentro dos passos */
+.step-text a {
+  display: inline-block;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  white-space: normal;
+  text-decoration: underline;
+  color: var(--color-primary);
+}
+
+/* Impede que o link cause overflow no mobile */
+@media (max-width: 600px) {
+  .step-text a {
+    word-break: break-all;
+    overflow-wrap: anywhere;
+    font-size: 0.95rem;
+  }
+
+  .guia-step {
+    padding: 1.2rem;
+  }
+}
+
+/* (Opcional) aparência mais suave quando há links grandes */
+.step-text a:hover {
+  text-decoration: none;
+  color: var(--color-primary-dark);
+}
